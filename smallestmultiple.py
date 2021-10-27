@@ -8,10 +8,10 @@ def main():
     #any number that is divisible by 1 through 20 will be a multiple of 2520, which is given to us in the problem
     #therefore, by checking only multiples of 2520 we save a massive amount of computing power compared to bruteforcing every number
     while found == False:
-        print("Testing: " + str(num))
+        print("Testing: " + str(num),end="\r")
         test = [num%n for n in range(11, 21)]
         if sum(test) == 0:
-            print(num)
+            print("\nThe smallest number that is divisible by 1-20 is: " + str(num))
             found = True
         else:
             num = num + 2520
