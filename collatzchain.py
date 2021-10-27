@@ -4,10 +4,13 @@
 #Which starting number, under one million, produces the largest chain?
 
 def main() :
+    def percentage(n):
+        percent = 100 * float(n)/1000000
+        return str(round(percent,2)) + "%"
     largest_count = 0
     longest_starting_number = 0
     for n in range(2, 1000000):
-        print("Testing: " + str(n))
+        print("Testing: " + str(n) + "/1000000" + " (" + percentage(n) + ")",end="\r")
         icount = 0
         starting_number = n
         while n != 1:
